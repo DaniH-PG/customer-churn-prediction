@@ -16,6 +16,7 @@ Interpretability drove the choice of algorithm. Gradient boosting would likely s
 |---|---|
 | `Holmes_Danielle_IN503_Unit10_Assignment.ipynb` | Full analysis notebook with code, visualizations, and written interpretation |
 | `customer_churn_model.pkl` | Trained pipeline including all preprocessing steps |
+| `requirements.txt` | Python packages needed to run the notebook |
 | `README.md` | This file |
 
 ## How to Run the Code
@@ -75,6 +76,8 @@ print(f"Churn probability: {probability:.4f}")
 **Higher monthly charges track with churn**, overlapping with the fiber finding and raising the question of whether customers see the price as matching the value delivered.
 
 **Engineered feature.** `TotalServices` counts how many of nine available services each customer subscribes to. Bundling changes the relationship: a customer with one service is buying a commodity and can switch easily, while a customer with six has to replace several things at once. That switching cost appears in no existing column, and it suggests a concrete intervention, which is offering an additional service instead of a discount.
+
+**Model performance.** On the held-out test set of 1,407 customers, the tuned model (C = 100) reached 79.67% accuracy, compared with 73.42% for a baseline that always predicts no churn. For the churn class, precision was 63.17%, recall was 56.42% (211 of 374 churners caught), and F1 was 59.60%. ROC-AUC was 0.8348 on the test set, close to the 0.8462 cross-validated score, so the tuning did not overfit.
 
 ## Evaluation Approach
 
