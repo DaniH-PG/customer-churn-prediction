@@ -113,7 +113,7 @@ Install with:
 pip install kagglehub pandas numpy matplotlib seaborn scikit-learn joblib
 ```
 
-Developed on Python 3.10+ with scikit-learn 1.8.0. The saved model requires scikit-learn 1.8 or newer to load.
+Developed on Python 3.10+ with scikit-learn 1.6.1. The saved model requires scikit-learn 1.6 or newer to load.
 
 ## Dataset
 
